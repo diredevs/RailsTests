@@ -33,6 +33,8 @@ group :development, :test do
   gem 'guard'
 end
 
+gem 'simplecov', '~> 0.7.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
