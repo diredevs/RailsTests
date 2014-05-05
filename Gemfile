@@ -31,6 +31,7 @@ gem 'factory_girl_rails'
 group :development, :test do
   gem 'rspec-rails'
   gem 'guard'
+  gem 'shoulda-matchers'
 end
 
 gem 'simplecov', '~> 0.7.1'
