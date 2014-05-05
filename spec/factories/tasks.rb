@@ -1,8 +1,9 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :list do
+  factory :task do
     name "MyString"
-    subject "MyString"
+    date DateTime.now
+    done false
   end
 end
