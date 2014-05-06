@@ -55,4 +55,6 @@ Rails.application.routes.draw do
   #   end
 
   resources :lists
+
+  root to: "lists#index"
 end
