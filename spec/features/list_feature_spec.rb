@@ -24,7 +24,7 @@ feature 'Create List' do
     fill_in "list[subject]", with: @list.subject
 
     click_button "saveList"
-    expect(page).to have_content "can't be blank"
+    expect(page).to have_content "Please review the problems below"
 
     current_path.should == list_path
   end
@@ -33,7 +33,7 @@ feature 'Create List' do
     fill_in "list[name]", with: @list.name
 
     click_button "saveList"
-    expect(page).to have_content "can't be blank"
+    expect(page).to have_content "Please review the problems below"
 
     current_path.should == list_path
   end
@@ -41,7 +41,7 @@ feature 'Create List' do
   scenario "with no name and no subject list gets error message" do
 
     click_button "saveList"
-    expect(page).to have_content "can't be blank"
+    expect(page).to have_content "Please review the problems below"
 
     current_path.should == list_path
   end
