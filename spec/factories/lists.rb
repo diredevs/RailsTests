@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :list do
-    name "MyString"
-    subject "MyString"
+    name "My List"
+    subject "Subject"
   end
 end
