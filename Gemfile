@@ -39,8 +39,11 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'guard-rspec', '~> 4.2.6', require: false
   gem 'guard-livereload', require: false
+  gem 'spring'
+  gem 'spring-commands-rspec'
   gem 'fuubar'
   gem 'coveralls', require: false
+  gem 'capybara'
 end
 
 gem 'simplecov', '~> 0.7.1'
