@@ -36,6 +36,7 @@ group :development, :test do
   gem 'guard-rspec', '~> 4.2.6', require: false
   gem 'guard-livereload', require: false
   gem 'fuubar'
+  gem 'coveralls', require: false
 end
 
 gem 'simplecov', '~> 0.7.1'
