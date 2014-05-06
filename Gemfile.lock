@@ -28,6 +28,8 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    bootstrap-sass (3.1.1.1)
+      sass (~> 3.2)
     builder (3.2.2)
     celluloid (0.15.2)
       timers (~> 1.1.0)
@@ -161,6 +163,9 @@ GEM
       rdoc (~> 4.0, < 5.0)
     shoulda-matchers (2.6.0)
       activesupport (>= 3.0.0)
+    simple_form (3.0.2)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     simplecov (0.7.1)
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
@@ -199,6 +204,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass
   coffee-rails (~> 4.0.0)
   coveralls
   factory_girl_rails
@@ -213,6 +219,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   shoulda-matchers
+  simple_form
   simplecov (~> 0.7.1)
   spring
   sqlite3

@@ -29,6 +29,10 @@ gem 'spring',        group: :development
 
 gem 'factory_girl_rails'
 
+gem 'simple_form'
+
+gem 'bootstrap-sass'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'guard'

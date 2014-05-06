@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap";
+@import "bootstrap/theme";
+
+
+body{
+  font-family: 'Arial', 'Heveltica';
+  background: #d4e2e4;
+  line-height: 2em;
+}
+
+.container{
+  margin-top: 2em;
+  background: #f8fdfe;
+  border: 1px solid #c7d4d5;
+  margin-right: auto;
+  margin-left: auto;
+  width: 500px;
+  padding: 0.1em 1em 1em 1em ;
+}
+
+.center{
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.h1{
+
+}
