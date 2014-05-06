@@ -1,0 +1,24 @@
+<hr>
+
+<%= simple_form_for(@task, html: {class: 'form-vertical' }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <% if params[:list] %>
+      <%= f.hidden_field :list_id, value: params[:list] %>
+    <% else %>
+      <%= f.association :list %>
+    <% end %>
+
+    <%= f.input :name %>
+    <%= f.input :date %>
+  </div>
+
+  <br>
+
+  <div class="form-actions">
+    <%= f.button :submit, class:"btn btn-success", id:"saveList", id: "saveTask" %>
+  </div>
+<% end %>
+
+<hr>
