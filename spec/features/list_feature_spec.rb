@@ -2,6 +2,8 @@ require 'spec_helper'
 
 feature 'Create List' do
 
+  list_path ='/lists'
+
   background do
     visit 'lists/new'
     @list = build(:list)
@@ -14,6 +16,8 @@ feature 'Create List' do
     click_button "saveList"
     expect(page).to have_content @list.subject
     expect(page).to have_content @list.name
+
+    current_path.should ==   '/lists/1'
   end
 
   scenario "with no name list gets error message" do
@@ -21,6 +25,8 @@ feature 'Create List' do
 
     click_button "saveList"
     expect(page).to have_content "can't be blank"
+
+    current_path.should == list_path
   end
 
   scenario "with no subject list gets error message" do
@@ -28,12 +34,16 @@ feature 'Create List' do
 
     click_button "saveList"
     expect(page).to have_content "can't be blank"
+
+    current_path.should == list_path
   end
 
   scenario "with no name and no subject list gets error message" do
 
     click_button "saveList"
     expect(page).to have_content "can't be blank"
+
+    current_path.should == list_path
   end
 
 
