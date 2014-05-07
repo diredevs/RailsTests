@@ -5,5 +5,6 @@ FactoryGirl.define do
     name "MyString"
     date DateTime.now
     done false
+    
   end
 end
