@@ -14,7 +14,8 @@
       <tr>
         <td><%= link_to list.name, list %></td>
         <td><%= list.subject %></td>
-        <td><%= link_to 'Show', list_path(list), class: 'btn btn-primary btn-xs' %>
+        <td><%= link_to 'New Task', "#", class: 'btn btn-success btn-xs' %>
+        <%= link_to 'Show', list_path(list), class: 'btn btn-primary btn-xs' %>
         <%= link_to 'Edit', edit_list_path(list), class: 'btn btn-info btn-xs' %>
         <%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %></td>
       </tr>
