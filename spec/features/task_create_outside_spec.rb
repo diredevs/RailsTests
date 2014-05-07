@@ -17,7 +17,6 @@ feature 'Create Task' do
 		click_button "saveTask"
 
 		expect(page).to have_content @task.name
-		expect(page).to have_content @task.date
 		expect(page).to have_content "Task was successfully created."
 	end
 
@@ -32,5 +31,5 @@ feature 'Create Task' do
 	end
 
 
-	
+
 end
