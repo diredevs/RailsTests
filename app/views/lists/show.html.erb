@@ -7,6 +7,36 @@
   <%= @list.subject %>
 </p>
 
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @list.tasks.each do |task| %>
+      <tr>
+        <td><%= task.name %></td>
+        <td><%= task.date %></td>
+        <td>
+        <% unless task.done? %>
+          <%= link_to 'Done', done_path(task), method: :post, class: 'btn btn-success btn-xs' %>
+        <% else %>
+          <div class= 'btn btn-warning btn-xs disabled'>
+            Completed
+          </div>
+        <% end %>
+        <%= link_to 'Edit', edit_task_path(task), class: 'btn btn-info btn-xs' %>
+        <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
 
 
 <%= link_to 'Back', lists_path, class: "btn btn-default btn-xs" %>

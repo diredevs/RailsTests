@@ -58,4 +58,7 @@ Rails.application.routes.draw do
   resources :tasks
 
   root to: "lists#index"
+
+  post "tasks/:task_id/done", to: "tasks#done", as: :done
+
 end
